@@ -1,80 +1,45 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter_2/daftarSiswa.dart';
+import 'package:tugas_flutter_2/tabKontak.dart';
 
-class HalamanUtama extends StatelessWidget {
+class HalamanUtama extends StatefulWidget {
   const HalamanUtama({Key? key}) : super(key: key);
 
   @override
+  State<HalamanUtama> createState() => _HalamanUtamaState();
+}
+
+class _HalamanUtamaState extends State<HalamanUtama> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Align(alignment: Alignment.center, child: Text("Daftar Murid")),
-      ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          final DaftarSiswa list = dataDaftarSiswa[index];
-          return InkWell(
-            splashColor: Colors.blue,
-            onTap: () {},
-            child: Container(
-              margin: const EdgeInsets.symmetric(vertical: 3, horizontal: 2),
-              child: Card(
-                elevation: 3,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: Hero(
-                          tag: list.nama,
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(34),
-                                topRight: Radius.circular(34),
-                              ),
-                              child: Image.asset(list.fotoProfil))),
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              list.nama,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(height: 18),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  list.kelas,
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.only(right: 9),
-                                  child: Text(
-                                    list.absen.toString(),
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+    return MaterialApp(
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 55, 84, 99),
+            bottom: const TabBar(
+              unselectedLabelColor: Color.fromARGB(255, 213, 213, 213),
+              indicatorColor: Color.fromARGB(255, 213, 213, 213),
+              tabs: [
+                Tab(icon: Icon(Icons.contacts)),
+                Tab(icon: Icon(Icons.phone)),
+                Tab(icon: Icon(Icons.directions_bike)),
+              ],
             ),
-          );
-        },
-        itemCount: dataDaftarSiswa.length,
+            title: Text('Jargon\'s Phonebook'),
+          ),
+          body: const TabBarView(
+            children: [
+              TabKontak(),
+              Center(
+                child: Text("2"),
+              ),
+              Center(
+                child: Text("3"),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
