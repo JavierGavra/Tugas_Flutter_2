@@ -1,8 +1,11 @@
 # tugas_flutter_2
 
-A new Flutter project.
+Sebuah tugas flutter yang dimana mempelajari banyak hal yaitu
+- Listview.builder
+- online API
+- TabView
 
-## Getting Started
+## Getting Started 
 
 This project is a starting point for a Flutter application.
 
