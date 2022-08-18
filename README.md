@@ -5,14 +5,13 @@ Sebuah tugas flutter yang dimana mempelajari banyak hal yaitu
 - online API
 - TabView
 
-## Getting Started 
+## Personal Deskripsi 
 
-This project is a starting point for a Flutter application.
+Project ini hasil sekolah saya di SMK Raden Umar Said
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Orang yg terlibat :
+- Javier Gavra [Creator project]
+- Aji Suryawan [Guru jurusan]
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
