@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_flutter_2/tabKontak.dart';
+import 'package:tugas_flutter_2/tabListFootball.dart';
 
 class HalamanUtama extends StatefulWidget {
   const HalamanUtama({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
               tabs: [
                 Tab(icon: Icon(Icons.contacts)),
                 Tab(icon: Icon(Icons.phone)),
-                Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.sports_basketball)),
               ],
             ),
             title: Text('Jargon\'s Phonebook'),
@@ -34,9 +35,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
               Center(
                 child: Text("2"),
               ),
-              Center(
-                child: Text("3"),
-              ),
+              TabListFootball(),
             ],
           ),
         ),
